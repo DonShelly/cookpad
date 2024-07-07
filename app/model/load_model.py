@@ -1,6 +1,9 @@
 import os
+import sys
 
 import tensorflow as tf
+
+sys.path.insert(0, "/mnt/efs/python/lib/python3.9/site-packages")
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 MODEL_PATH = os.path.join(dir_path, 'tomato_model.h5')
