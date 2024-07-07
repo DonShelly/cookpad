@@ -3,17 +3,21 @@ This document outlines potential enhancements and improvements for the Tomato Cl
 
 ## Potential Improvements
 
-### Model Management
-- **Model Versioning**: Implement model versioning to manage multiple versions of the model seamlessly. This allows rolling back to previous versions if needed and testing new models without disrupting the current service.
-- **Dynamic Model Loading**: Enable the API to load different models dynamically based on configuration or an API parameter, without restarting the service.
+### Security Improvements
+- **Authentication and Authorization**: Implement OAuth or API token authentication to secure the endpoints and ensure that only authorized users can access the API.
+  - A method I would recommend 'boto3' package to access AWS Secrets Manager and 'hmac' package for key validation
+- **Input Sanitization**: Enhance input validation to protect against SQL injection and other malicious input vectors, although the current setup is less prone to such risks due to the lack of a database.
 
 ### API Enhancements
 - **Batch Processing**: Extend the API to handle batch requests, allowing multiple sets of inputs to be predicted in a single request. This can significantly improve throughput and efficiency for client applications.
 - **API Rate Limiting**: Introduce rate limiting to prevent abuse and ensure fair usage among consumers.
 
-### Security Improvements
-- **Authentication and Authorization**: Implement OAuth or API token authentication to secure the endpoints and ensure that only authorized users can access the API.
-- **Input Sanitization**: Enhance input validation to protect against SQL injection and other malicious input vectors, although the current setup is less prone to such risks due to the lack of a database.
+### Storage and Re-processing
+- **Database**: Storing the results in AWS RDS would be a performant and reliable method to store the data. We may want to re-process some inputs with newer iterations of the model and an automated system for this would be very useful.
+
+### Model Management
+- **Model Versioning**: Implement model versioning to manage multiple versions of the model seamlessly. This allows rolling back to previous versions if needed and testing new models without disrupting the current service.
+- **Dynamic Model Loading**: Enable the API to load different models dynamically based on configuration or an API parameter, without restarting the service.
 
 ### Performance and Scalability
 - **Load Balancing**: Use a load balancer to distribute incoming API requests evenly across multiple instances of the application. This would improve the service's ability to handle high traffic.

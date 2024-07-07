@@ -4,7 +4,7 @@ remove-cache:
 	find . -type d -name "__pycache__" -exec rm -r {} +
 
 deploy-dev:
-# 	make refresh-venv
+	make refresh-venv
 	make remove-cache
 	. venv/bin/activate && zappa deploy dev
 update-dev:

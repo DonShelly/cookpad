@@ -1,9 +1,14 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 import numpy as np
 from app.model.load_model import load_model, predict
 from application import app
 
 model = load_model()
+
+
+@app.route('/', methods=['GET'])
+def index():
+    return jsonify("Tomato Base API")
 
 
 @app.route('/predict', methods=['POST'])
