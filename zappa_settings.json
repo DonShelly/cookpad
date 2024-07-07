@@ -1,0 +1,33 @@
+{
+    "dev": {
+        "slim_handler": "true",
+        "app_function": "application.app",
+        "exclude": [
+            ".git/*",
+            ".idea/*",
+            ".vscode/*",
+            "env/*",
+            "venv/*",
+            "node_modules/*",
+            "package-lock.json",
+            "package.json",
+            "README.md",
+            "zappa_settings.json",
+            "zappa_settings.py",
+            "zappa_settings.yaml",
+            "zappa_settings.yml",
+            "zappa_settings.toml",
+            "zappa_settings.ini",
+            "pycache/*"
+        ],
+        "profile_name": "default",
+        "project_name": "tomato_detector",
+
+        "runtime": "python3.9",
+
+        "aws_region": "eu-west-2",
+        "s3_bucket": "zappa-tomato",
+
+        "timeout_seconds": 900
+    }
+}

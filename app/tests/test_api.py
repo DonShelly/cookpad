@@ -1,5 +1,5 @@
 import unittest
-from flask import Flask
+
 from app.api.main import app
 
 

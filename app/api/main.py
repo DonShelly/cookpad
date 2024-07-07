@@ -1,8 +1,7 @@
 from flask import Flask, request, jsonify
 import numpy as np
 from app.model.load_model import load_model, predict
-
-app = Flask(__name__)
+from application import app
 
 model = load_model()
 
