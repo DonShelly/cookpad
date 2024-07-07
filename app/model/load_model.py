@@ -1,6 +1,9 @@
+import os
+
 import tensorflow as tf
 
-MODEL_PATH = './app/model/tomato_model.h5'
+dir_path = os.path.dirname(os.path.realpath(__file__))
+MODEL_PATH = os.path.join(dir_path, 'tomato_model.h5')
 class_names = ['Plum', 'Cherry', 'BeefSteak']
 
 
