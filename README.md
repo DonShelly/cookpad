@@ -1,17 +1,7 @@
 ## Technical Exercise: The Tomato Classification Problem
+I completed this exercise while i was focussing on my next career move in Bristol. This company has a very interesting product however due to opting to relocate to London it was no longer a good fit.
 
-Our Machine Learning research team has designed and trained a Machine Learning model that is able to successfully
-categorize 3 different types of tomatoes based on 4 features that represent shape and form ratios.
-
-There are hundreds of tomatoes varieties but the model only handles three types so far:
-
-- Plum Tomatoes
-- Cherry Tomatoes
-- BeefSteak Tomatoes
-
-Our Machine Learning research team presented the model to our product manager who was very impressed with the result. 
-Hence, she would like to use this model in a new product feature where ingredients are auto populated when users create
-new recipes. 
+Upload rights: I think this is acceptable to upload publicly; please contact me if otherwise and I will remove the repo.
 
 ## Objective
 
